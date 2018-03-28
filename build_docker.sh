@@ -3,4 +3,4 @@
 set -e
 
 docker build --tag cirrusci/flutter:base base
-docker build --tag cirrusci/flutter:0.2.0 --tag cirrusci/flutter:latest 0.2.0
+docker build --tag cirrusci/flutter:0.2.4 --tag cirrusci/flutter:latest 0.2.4
