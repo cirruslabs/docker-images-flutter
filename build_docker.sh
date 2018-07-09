@@ -6,4 +6,4 @@ set -e
 docker pull cirrusci/flutter:base
 
 docker build --tag cirrusci/flutter:base base
-docker build --tag cirrusci/flutter:0.5.5 --tag cirrusci/flutter:latest 0.5.5
+docker build --tag cirrusci/flutter:0.5.6 --tag cirrusci/flutter:latest 0.5.6
