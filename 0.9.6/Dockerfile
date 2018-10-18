@@ -1,7 +1,7 @@
 FROM cirrusci/flutter:base
 
 ENV FLUTTER_HOME ${HOME}/sdks/flutter
-ENV FLUTTER_VERSION 0.5.6
+ENV FLUTTER_VERSION 0.9.6
 
 RUN git clone --branch v${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME}
 
