@@ -10,5 +10,5 @@ fi
 docker login --username $DOCKER_USER_NAME --password $DOCKER_PASSWORD
 
 docker push cirrusci/flutter:base
-docker push cirrusci/flutter:0.5.6
+docker push cirrusci/flutter:0.10.2
 docker push cirrusci/flutter:latest
