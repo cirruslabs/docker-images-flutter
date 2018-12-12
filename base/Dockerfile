@@ -1,4 +1,4 @@
-FROM cirrusci/android-sdk:26
+FROM cirrusci/android-sdk:28
 
 RUN sudo apt-get update \
     && sudo apt-get install -y --allow-unauthenticated --no-install-recommends lib32stdc++6 libstdc++6 libglu1-mesa locales \
