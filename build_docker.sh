@@ -6,4 +6,7 @@ set -e
 docker pull cirrusci/flutter:base
 
 docker build --tag cirrusci/flutter:base base
-docker build --tag cirrusci/flutter:1.1.0 --tag cirrusci/flutter:latest 1.1.0
+docker build --tag cirrusci/flutter:$FLUTTER_VERSION \
+             --tag cirrusci/flutter:latest \
+             --build-arg flutter_version=$FLUTTER_VERSION \
+             sdk
