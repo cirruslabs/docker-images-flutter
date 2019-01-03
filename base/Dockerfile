@@ -8,3 +8,5 @@ RUN sudo locale-gen en_US "en_US.UTF-8" \
     && sudo dpkg-reconfigure locales
 
 ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+ENV LANGUAGE en_US:en
