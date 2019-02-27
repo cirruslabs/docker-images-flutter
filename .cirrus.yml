@@ -3,7 +3,7 @@ environment:
   DOCKER_PASSWORD: ENCRYPTED[955ccf4734b017d3880cf99d346b07435245666e095054b87026b99bad749e17134999986cfd109ace0c71e5a7025da6]
 
 env:
-  FLUTTER_VERSION: 1.0.0
+  FLUTTER_VERSION: 1.2.1
 
 flutter_docker_builder:
   build_script: ./build_docker.sh
