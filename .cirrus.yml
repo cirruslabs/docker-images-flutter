@@ -5,12 +5,13 @@ environment:
 flutter_docker_builder:
   env:
     matrix:
-    - FLUTTER_VERSION: v1.2.1 # stable
-    - FLUTTER_VERSION: stable
-    - FLUTTER_VERSION: v1.5.4 # beta
-    - FLUTTER_VERSION: beta
-    - FLUTTER_VERSION: v1.5.8 # dev
-    - FLUTTER_VERSION: dev
-    - FLUTTER_VERSION: master
+    - DOCKER_TAG: stable
+      FLUTTER_VERSION: v1.2.1
+    - DOCKER_TAG: beta
+      FLUTTER_VERSION: v1.5.4
+    - DOCKER_TAG: dev
+      FLUTTER_VERSION: v1.5.8
+    - DOCKER_TAG: latest
+      FLUTTER_VERSION: master
   build_script: ./build_docker.sh
   push_script: ./push_docker.sh
