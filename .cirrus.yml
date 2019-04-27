@@ -2,9 +2,16 @@ environment:
   DOCKER_USER_NAME: ENCRYPTED[5401d6fcedc8f4252e876506a88d910ff6cf161c3fbabd75cafca088e2c05cd7c64bf30ac54e37fa29a26d085349fdf9]
   DOCKER_PASSWORD: ENCRYPTED[955ccf4734b017d3880cf99d346b07435245666e095054b87026b99bad749e17134999986cfd109ace0c71e5a7025da6]
 
-env:
-  FLUTTER_VERSION: 1.2.1
-
 flutter_docker_builder:
+  env:
+    matrix:
+    - DOCKER_TAG: stable
+      FLUTTER_VERSION: v1.2.1
+    - DOCKER_TAG: beta
+      FLUTTER_VERSION: v1.5.4
+    - DOCKER_TAG: dev
+      FLUTTER_VERSION: v1.5.8
+    - DOCKER_TAG: latest
+      FLUTTER_VERSION: master
   build_script: ./build_docker.sh
   push_script: ./push_docker.sh
