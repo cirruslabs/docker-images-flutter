@@ -6,9 +6,9 @@ flutter_docker_builder:
   env:
     matrix:
     - DOCKER_TAG: latest
-      FLUTTER_VERSION: v1.2.1
+      FLUTTER_VERSION: v1.5.4-hotfix.2
     - DOCKER_TAG: beta
-      FLUTTER_VERSION: v1.5.4
+      FLUTTER_VERSION: v1.5.4-hotfix.2
     - DOCKER_TAG: dev
       FLUTTER_VERSION: v1.5.8
   build_script: ./build_docker.sh
