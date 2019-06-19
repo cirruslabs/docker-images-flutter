@@ -9,6 +9,8 @@ RUN sudo apt-get update \
         lcov \
     && sudo rm -rf /var/lib/apt/lists/*
 
-RUN sudo sh -c 'echo "en_US.UTF-8 UTF-8" > /etc/locale.gen' && \
+RUN RUN wget -O /usr/bin/android-wait-for-emulator https://raw.githubusercontent.com/travis-ci/travis-cookbooks/master/community-cookbooks/android-sdk/files/default/android-wait-for-emulator && \
+    chmod +x /usr/bin/android-wait-for-emulator && \
+    sudo sh -c 'echo "en_US.UTF-8 UTF-8" > /etc/locale.gen' && \
     sudo locale-gen && \
     sudo update-locale LANG=en_US.UTF-8
