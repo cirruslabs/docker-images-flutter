@@ -1,6 +1,6 @@
-ARG flutter_version
+ARG flutter_tag
 
-FROM cirrusci/flutter:$flutter_version
+FROM cirrusci/flutter:$flutter_tag
 
 RUN sudo apt-get update \
     && sudo apt-get install -y chromium \
