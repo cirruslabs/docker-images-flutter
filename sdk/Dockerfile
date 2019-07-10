@@ -12,3 +12,5 @@ ENV PATH ${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
 
 # doctor
 RUN flutter doctor
+
+ENTRYPOINT ["flutter"]
