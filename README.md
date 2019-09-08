@@ -5,7 +5,7 @@
 You can either [use it in CI](https://cirrus-ci.org/examples/#flutter) or run locally via Docker:
 
 ```bash
-docker run --rm -it -v ${PWD}:/build cirrusci/flutter:stable flutter test
+docker run --rm -it -v ${PWD}:/build --workdir /build cirrusci/flutter:stable flutter test
 ```
 
 The example above simply mount current working directory and runs `flutter test`
