@@ -1,4 +1,4 @@
-FROM cirrusci/android-sdk:28
+FROM cirrusci/android-sdk:29
 
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
