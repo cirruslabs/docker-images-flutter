@@ -2,11 +2,6 @@
 
 set -e
 
-# pull to make sure we are not rebuilding for nothing
-docker pull cirrusci/flutter:base
-
-docker build --cache-from cirrusci/flutter:base \
-             --tag cirrusci/flutter:base base
 docker build --cache-from cirrusci/flutter:${FLUTTER_VERSION/+/-} \
              --tag cirrusci/flutter:${FLUTTER_VERSION/+/-} \
              --tag cirrusci/flutter:$DOCKER_TAG \
