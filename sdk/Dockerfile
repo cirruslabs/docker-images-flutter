@@ -10,13 +10,7 @@ ENV PATH ${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
 
 RUN sudo apt-get update && \
     sudo apt-get install -y --no-install-recommends \
-        ca-certificates \
-        curl \
-        wget \
-        git \
-        mercurial \
         openssh-client \
-        subversion && \
     sudo rm -rf /var/lib/apt/lists/*
 
 RUN git clone --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME} && \
