@@ -7,9 +7,9 @@ flutter_docker_builder:
     # from https://flutter.dev/docs/development/tools/sdk/releases
     matrix:
     - DOCKER_TAG: latest
-      FLUTTER_VERSION: v1.9.1+hotfix.4
+      FLUTTER_VERSION: v1.9.1+hotfix.5
     - DOCKER_TAG: stable
-      FLUTTER_VERSION: v1.9.1+hotfix.4
+      FLUTTER_VERSION: v1.9.1+hotfix.5
     - DOCKER_TAG: beta
       FLUTTER_VERSION: v1.10.7
     - DOCKER_TAG: dev
