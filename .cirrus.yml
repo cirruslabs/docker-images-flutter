@@ -11,8 +11,8 @@ flutter_docker_builder:
     - DOCKER_TAG: stable
       FLUTTER_VERSION: v1.9.1+hotfix.6
     - DOCKER_TAG: beta
-      FLUTTER_VERSION: v1.11.0
+      FLUTTER_VERSION: v1.12.13+hotfix.2
     - DOCKER_TAG: dev
-      FLUTTER_VERSION: v1.12.11
+      FLUTTER_VERSION: v1.12.16
   build_script: ./build_docker.sh
   push_script: ./push_docker.sh
