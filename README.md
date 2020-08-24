@@ -9,7 +9,7 @@ docker run --rm -it -v ${PWD}:/build --workdir /build cirrusci/flutter:stable fl
 ```
 
 The example above simply mount current working directory and runs `flutter test`
-
+  
 ## Available Docker Tags
 
 [![](https://images.microbadger.com/badges/version/cirrusci/flutter:latest.svg)](https://microbadger.com/images/cirrusci/flutter:latest) [![](https://images.microbadger.com/badges/image/cirrusci/flutter:latest.svg)](https://microbadger.com/images/cirrusci/flutter:latest)
