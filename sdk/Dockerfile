@@ -1,5 +1,7 @@
 FROM cirrusci/android-sdk:30
 
+USER root
+
 ARG flutter_version
 
 ENV FLUTTER_HOME=${HOME}/sdks/flutter \
