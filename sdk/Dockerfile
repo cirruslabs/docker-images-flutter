@@ -1,4 +1,4 @@
-FROM cirrusci/android-sdk:29
+FROM cirrusci/android-sdk:30
 
 ARG flutter_version
 
