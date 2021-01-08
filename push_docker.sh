@@ -2,6 +2,9 @@
 
 set -e
 
+docker history cirrusci/flutter:${FLUTTER_VERSION/+/-}
+docker history cirrusci/flutter:$DOCKER_TAG
+
 if [ "$CIRRUS_BRANCH" != "master" ]
 then
     exit 0
