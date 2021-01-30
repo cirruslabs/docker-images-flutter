@@ -14,6 +14,6 @@ docker_builder:
     - DOCKER_TAG: beta
       FLUTTER_VERSION: 1.25.0-8.3.pre
     - DOCKER_TAG: dev
-      FLUTTER_VERSION: 1.26.0-12.0.pre
+      FLUTTER_VERSION: 1.26.0-17.1.pre
   build_script: ./build_docker.sh
   push_script: ./push_docker.sh
