@@ -8,12 +8,12 @@ docker_builder:
     # from https://flutter.dev/docs/development/tools/sdk/releases
     matrix:
     - DOCKER_TAG: latest
-      FLUTTER_VERSION: 1.22.6
+      FLUTTER_VERSION: 2.0.0
     - DOCKER_TAG: stable
-      FLUTTER_VERSION: 1.22.6
+      FLUTTER_VERSION: 2.0.0
     - DOCKER_TAG: beta
-      FLUTTER_VERSION: 1.26.0-17.8.pre
+      FLUTTER_VERSION: 2.0.0
     - DOCKER_TAG: dev
-      FLUTTER_VERSION: 1.27.0-8.0.pre
+      FLUTTER_VERSION: 2.1.0-10.0.pre
   build_script: ./build_docker.sh
   push_script: ./push_docker.sh
