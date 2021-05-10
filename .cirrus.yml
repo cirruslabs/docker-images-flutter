@@ -2,8 +2,14 @@ environment:
   DOCKER_USER_NAME: ENCRYPTED[5401d6fcedc8f4252e876506a88d910ff6cf161c3fbabd75cafca088e2c05cd7c64bf30ac54e37fa29a26d085349fdf9]
   DOCKER_PASSWORD: ENCRYPTED[955ccf4734b017d3880cf99d346b07435245666e095054b87026b99bad749e17134999986cfd109ace0c71e5a7025da6]
 
-docker_builder:
+task:
   name: flutter:$DOCKER_TAG
+  compute_engine_instance:
+    image_project: cirrus-images
+    image: family/docker-kvm
+    platform: linux
+    cpu: 4
+    memory: 16G
   env:
     # from https://flutter.dev/docs/development/tools/sdk/releases
     matrix:
@@ -15,5 +21,9 @@ docker_builder:
       FLUTTER_VERSION: 2.2.0-10.2.pre
     - DOCKER_TAG: dev
       FLUTTER_VERSION: 2.3.0-0.1.pre
+  setup_script:
+    - docker buildx create --name multibuilder
+    - docker buildx use multibuilder
+    - docker buildx inspect --bootstrap
   build_script: ./build_docker.sh
   push_script: ./push_docker.sh
