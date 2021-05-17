@@ -24,6 +24,12 @@ RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache \
     --installPath C:\BuildTools \
      || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
+# Install Google Root R1 cert so pub.dartlang.org stays working
+
+ADD https://pki.goog/repo/certs/gtsr1.pem C:/TEMP/gtsr1.pem
+RUN powershell.exe -Command \
+        Import-Certificate -FilePath C:\TEMP\gtsr1.pem -CertStoreLocation Cert:\LocalMachine\Root
+
 # Install Flutter
 
 RUN setx path "%path%;C:\flutter\bin;C:\flutter\bin\cache\dart-sdk\bin;"
