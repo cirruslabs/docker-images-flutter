@@ -16,5 +16,3 @@ docker push cirrusci/flutter:${FLUTTER_VERSION/+/-}
 docker push cirrusci/flutter:$DOCKER_TAG
 #docker push cirrusci/flutter:${FLUTTER_VERSION/+/-}-web
 #docker push cirrusci/flutter:$DOCKER_TAG-web
-
-curl -X POST https://hooks.microbadger.com/images/cirrusci/flutter/jvUQ_07dNfmCwsULt6N9qYdgsNg=
