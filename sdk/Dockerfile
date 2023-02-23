@@ -1,4 +1,4 @@
-FROM cirrusci/android-sdk:30
+FROM cirrusci/android-sdk:33
 
 USER root
 
