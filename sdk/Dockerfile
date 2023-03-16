@@ -1,5 +1,6 @@
-FROM cirrusci/android-sdk:33
+FROM ghcr.io/cirruslabs/android-sdk:33
 
+LABEL org.opencontainers.image.source=https://github.com/cirruslabs/docker-images-flutter
 USER root
 
 ARG flutter_version
