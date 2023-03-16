@@ -1,6 +1,5 @@
-environment:
-  DOCKER_USER_NAME: ENCRYPTED[5401d6fcedc8f4252e876506a88d910ff6cf161c3fbabd75cafca088e2c05cd7c64bf30ac54e37fa29a26d085349fdf9]
-  DOCKER_PASSWORD: ENCRYPTED[955ccf4734b017d3880cf99d346b07435245666e095054b87026b99bad749e17134999986cfd109ace0c71e5a7025da6]
+env:
+  GITHUB_TOKEN: ENCRYPTED[!82ed873afdf627284305afef4958c85a8f73127b09978a9786ac521559630ea6c9a5ab6e7f8315abf9ead09b6eff6eae!]
 
 docker_builder:
   name: flutter:$DOCKER_TAG
@@ -13,5 +12,9 @@ docker_builder:
       FLUTTER_VERSION: 3.7.7
     - DOCKER_TAG: beta
       FLUTTER_VERSION: 3.8.0-10.1.pre
-  build_script: ./build_docker.sh
-  push_script: ./push_docker.sh
+  version_script: docker --version
+  setup_script:
+    - docker buildx create --name multibuilder
+    - docker buildx use multibuilder
+    - docker buildx inspect --bootstrap
+  ci_script: ./ci.sh
