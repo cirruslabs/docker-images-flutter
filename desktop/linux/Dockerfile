@@ -1,5 +1,5 @@
-FROM ghcr.io/cirruslabs/flutter:dev
+FROM cirrusci/flutter
 
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends cmake ninja-build clang build-essential pkg-config libgtk-3-dev liblzma-dev lcov
+ENV CMAKE_CXX_COMPILER=/usr/bin/clang++
+RUN apt-get update && apt-get install -y ninja-build
 RUN flutter config --enable-linux-desktop
