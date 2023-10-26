@@ -11,7 +11,7 @@ docker_builder:
     - DOCKER_TAG: stable
       FLUTTER_VERSION: 3.13.9
     - DOCKER_TAG: beta
-      FLUTTER_VERSION: 3.15.0-15.2.pre
+      FLUTTER_VERSION: 3.16.0-0.3.pre
   version_script: docker --version
   setup_script:
     - docker buildx create --name multibuilder
