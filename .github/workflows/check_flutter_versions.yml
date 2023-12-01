@@ -1,0 +1,34 @@
+name: "Check Flutter versions"
+on:
+  schedule:
+    # Every 2 hours
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+jobs:
+  check_versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install yq and jq
+      - name: Install yq and jq
+        run: |
+          mkdir -p ~/bin
+          wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O ~/bin/yq
+          chmod +x ~/bin/yq
+          echo "$HOME/bin" >> $GITHUB_PATH
+
+          sudo apt-get install -y jq curl
+
+      - name: Check for new Flutter versions 
+        run: sh scripts/update_flutter_versions.sh
+
+      # Create a Pull Request if there are any changes.
+      # This is automatically checked internally
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: Update Flutter version"
+          title: "chore: Update Flutter version"
+          branch: "chore/update-flutter-version"
