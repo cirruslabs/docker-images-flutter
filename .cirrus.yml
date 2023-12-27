@@ -1,17 +1,16 @@
 env:
   GITHUB_TOKEN: ENCRYPTED[!82ed873afdf627284305afef4958c85a8f73127b09978a9786ac521559630ea6c9a5ab6e7f8315abf9ead09b6eff6eae!]
-
 docker_builder:
   name: flutter:$DOCKER_TAG
   env:
     # from https://flutter.dev/docs/development/tools/sdk/releases
     matrix:
-    - DOCKER_TAG: latest
-      FLUTTER_VERSION: 3.16.5
-    - DOCKER_TAG: stable
-      FLUTTER_VERSION: 3.16.5
-    - DOCKER_TAG: beta
-      FLUTTER_VERSION: 3.17.0-0.0.pre
+      - DOCKER_TAG: latest
+        FLUTTER_VERSION: 3.16.5
+      - DOCKER_TAG: stable
+        FLUTTER_VERSION: 3.16.5
+      - DOCKER_TAG: beta
+        FLUTTER_VERSION: 3.18.0-0.2.pre
   version_script: docker --version
   setup_script:
     - docker buildx create --name multibuilder
