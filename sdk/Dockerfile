@@ -14,7 +14,6 @@ ENV PATH ${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
 RUN git clone --depth 1 --no-single-branch --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME}
 
 RUN yes | flutter doctor --android-licenses \
-    && flutter doctor \
     && chown -R root:root ${FLUTTER_HOME}
 
 RUN flutter precache --android
