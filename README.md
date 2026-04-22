@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repostiry will stop updating images starting May 1st 2026 due to Cirrus Labs winding down operations after an acquisition.
+
 # Docker Images for [Flutter](https://flutter.dev/)
 
 [![Build Status][build_badge]][build_link]
