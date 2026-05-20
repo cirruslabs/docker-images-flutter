@@ -1,5 +1,7 @@
 > [!IMPORTANT]
 > This repostiry will stop updating images starting May 1st 2026 due to Cirrus Labs winding down operations after an acquisition.
+>
+> A community-maintained fork that continues publishing updated images is available at [`adrianjagielak/docker-images-flutter`](https://github.com/adrianjagielak/docker-images-flutter). It is independent and not affiliated with or endorsed by Cirrus Labs or OpenAI.
 
 # Docker Images for [Flutter](https://flutter.dev/)
 
