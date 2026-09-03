@@ -6,11 +6,11 @@ docker_builder:
     # from https://flutter.dev/docs/development/tools/sdk/releases
     matrix:
       - DOCKER_TAG: latest
-        FLUTTER_VERSION: 3.44.0
+        FLUTTER_VERSION: 3.47.2
       - DOCKER_TAG: stable
-        FLUTTER_VERSION: 3.44.0
+        FLUTTER_VERSION: 3.47.2
       - DOCKER_TAG: beta
-        FLUTTER_VERSION: 3.44.0-0.3.pre
+        FLUTTER_VERSION: 3.48.0-0.4.pre
   version_script: docker --version
   setup_script:
     - docker buildx create --name multibuilder
